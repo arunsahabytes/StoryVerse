@@ -40,8 +40,14 @@ app.use('/auth', apiLimiter);
 app.use('/admin', apiLimiter);
 
 // CORS Configuration
+// CORS Configuration
 app.use(cors({
-  origin: process.env.CLIENT_URL, // Ensure CLIENT_URL is set to frontend's URL
+  origin: [
+    'http://13.201.25.70',
+    'http://storyverse-website.s3-website.ap-south-1.amazonaws.com',
+    'https://d30ib605w8wpui.cloudfront.net',
+    'http://localhost:3000'
+  ],
   credentials: true
 }));
 
