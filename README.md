@@ -4,6 +4,10 @@
 
 Hey there! 👋 This is **StoryVerse** - my full-stack project that lets people collaborate on stories in real-time. Think of it like a digital campfire where everyone can add their own chapter to the story!
 
+🌐 Live Production Demo
+Frontend: https://d30ib605w8wpui.cloudfront.net
+Backend API: https://storyverse.duckdns.org
+
 ## ✨ What's Cool About It
 
 - **🤝 Collaborative Writing**: Start a story and let others add their own chapters
