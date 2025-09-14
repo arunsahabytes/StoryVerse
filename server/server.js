@@ -43,10 +43,9 @@ app.use('/admin', apiLimiter);
 // CORS Configuration
 app.use(cors({
   origin: [
-    'http://13.201.25.70',
-    'http://storyverse-website.s3-website.ap-south-1.amazonaws.com',
     'https://d30ib605w8wpui.cloudfront.net',
-    'http://localhost:3000'
+    'https://storyverse.duckdns.org',
+    'http://localhost:3000' 
   ],
   credentials: true
 }));
@@ -67,13 +66,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('Connected to MongoDB'))
-.catch((err) => console.error('MongoDB connection error:', err));
-
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('Connected to MongoDB'))
+  .catch((err) => console.error('MongoDB connection error:', err));
 // Routes
 app.use('/auth', authRoutes);
 app.use('/stories', storyRoutes);
